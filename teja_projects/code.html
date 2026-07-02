@@ -1,0 +1,351 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>P. BHANU TEJA // SELECTED_PROJECTS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#8fdb00",
+                        "surface-variant": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "on-tertiary-fixed-variant": "#494900",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1b1b",
+                        "surface-dim": "#dadada",
+                        "on-secondary-fixed": "#3e001f",
+                        "on-background": "#1b1b1b",
+                        "tertiary": "#626200",
+                        "surface-tint": "#426900",
+                        "primary-fixed": "#a8f928",
+                        "on-primary": "#ffffff",
+                        "secondary": "#b40065",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary-container": "#497300",
+                        "inverse-primary": "#8fdb00",
+                        "outline": "#717a62",
+                        "surface-container": "#eeeeee",
+                        "surface": "#f9f9f9",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#414a35",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed": "#1d1d00",
+                        "primary-container": "#adff2f",
+                        "surface-bright": "#f9f9f9",
+                        "primary": "#426900",
+                        "on-error": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#cdcd00",
+                        "on-secondary-fixed-variant": "#8d004e",
+                        "on-primary-fixed-variant": "#314f00",
+                        "secondary-fixed": "#ffd9e3",
+                        "tertiary-container": "#f0f000",
+                        "background": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-surface": "#303030",
+                        "secondary-container": "#e10080",
+                        "on-tertiary-container": "#6c6c00",
+                        "secondary-fixed-dim": "#ffb0ca",
+                        "tertiary-fixed": "#eaea00",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-primary-fixed": "#112000",
+                        "outline-variant": "#c1caae"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin-desktop": "48px",
+                        "gutter": "24px",
+                        "border-weight-thick": "4px",
+                        "border-weight-thin": "2px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "label-bold": ["JetBrains Mono"],
+                        "code-sm": ["JetBrains Mono"],
+                        "display-lg": ["Syne"],
+                        "display-2xl": ["Syne"],
+                        "headline-md": ["Syne"],
+                        "body-lg": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Syne"],
+                        "body-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "label-bold": ["14px", {"lineHeight": "120%", "fontWeight": "700"}],
+                        "code-sm": ["12px", {"lineHeight": "140%", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "display-2xl": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-md": ["32px", {"lineHeight": "110%", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "150%", "fontWeight": "500"}],
+                        "display-lg-mobile": ["42px", {"lineHeight": "100%", "fontWeight": "800"}],
+                        "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .neo-brutalist-border { border: 4px solid #000000; }
+        .neo-brutalist-shadow { box-shadow: 8px 8px 0px 0px #000000; }
+        .neo-brutalist-shadow-sm { box-shadow: 4px 4px 0px 0px #000000; }
+        .active-shadow-pressed { transform: translate(4px, 4px); box-shadow: 0px 0px 0px 0px #000000; }
+        
+        .scanline-bg {
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 4px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .kinetic-marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            animation: marquee 20s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .glitch-hover:hover {
+            animation: glitch 0.3s cubic-bezier(.25,.46,.45,.94) both infinite;
+        }
+
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+
+        .sticker {
+            position: absolute;
+            z-index: 10;
+            pointer-events: none;
+            filter: drop-shadow(4px 4px 0px #000);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden selection:bg-tertiary-container selection:text-on-tertiary-container">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-background border-b-4 border-on-background">
+<div class="font-display-lg-mobile text-display-lg-mobile text-primary uppercase tracking-tighter">
+            DEV_CORE_V4
+        </div>
+<button class="material-symbols-outlined text-primary text-3xl hover:translate-x-1 hover:translate-y-1 transition-transform">
+            terminal
+        </button>
+</header>
+<main class="pt-20 pb-32">
+<!-- Hero Section -->
+<section class="relative h-[60vh] flex flex-col justify-center items-start px-margin-mobile md:px-margin-desktop bg-primary-container overflow-hidden border-b-4 border-on-background">
+<div class="absolute inset-0 scanline-bg opacity-30"></div>
+<div class="relative z-20"><div class="bg-secondary text-white font-label-bold px-4 py-2 border-2 border-black inline-block mb-4 neo-brutalist-shadow-sm -rotate-3">FOUNDER_OF_GROWXAI</div>
+<p class="font-code-sm text-code-sm bg-on-background text-background px-2 py-1 mb-4 inline-block">
+                    USR_B_TEJA // ROOT:PROJECTS
+                </p>
+<h1 class="font-display-2xl text-display-2xl leading-none uppercase mix-blend-difference text-on-background">
+                    SELECTED_<br>PROJECTS
+                </h1>
+</div>
+<!-- Drifting Stickers -->
+<div class="sticker top-10 right-10 rotate-12 bg-tertiary-container p-4 border-2 border-black font-label-bold" style="transform: translate(3.61538px, 0.63116px) rotate(12deg);">TOP_SECRET</div>
+<div class="sticker bottom-20 left-1/2 -translate-x-1/2 -rotate-3 bg-secondary-container text-white p-4 border-2 border-black font-label-bold" style="transform: translate(7.23077px, 1.26232px) rotate(-3deg);">BUILD_LOG_004</div>
+</section>
+<!-- Marquee Separator -->
+<div class="w-full bg-secondary py-2 border-b-4 border-on-background flex overflow-hidden">
+<div class="kinetic-marquee font-display-lg text-white uppercase text-2xl">
+                FOUNDER_OF_GROWXAI — FOUNDER_OF_GROWXAI — FOUNDER_OF_GROWXAI — FOUNDER_OF_GROWXAI — FOUNDER_OF_GROWXAI — FOUNDER_OF_GROWXAI — FOUNDER_OF_GROWXAI —
+            </div>
+</div>
+<!-- Project Grid -->
+<section class="max-w-6xl mx-auto px-margin-mobile py-12 flex flex-col gap-12">
+<!-- Project 1: Sudha Vanagar -->
+<div class="group relative bg-surface neo-brutalist-border p-6 md:p-10 neo-brutalist-shadow transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+<span class="absolute top-[-16px] left-8 bg-primary text-white border-2 border-black px-4 py-1 font-label-bold z-10">LATEST_RELEASE_V4.0</span>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 aspect-video bg-white neo-brutalist-border overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A futuristic agricultural logistics dashboard showcasing complex data grids, maps of green farmlands, and neon routing lines. The UI is clean yet dense with information, featuring a lime green and deep black neo-brutalist color scheme. High contrast lighting emphasizes technical precision and modern digital farming technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx5IyXVtbtpy_ZPJstBiKQPkWSOEa57sva7TigQ1-IgOXm60Uj8c1PtVV1xKjGrgyqz43TEo_1WXbhHjk75Jyy4xkjBUSMvR2MJ8HYyZv-0nJCKVibAFFq7CdCaDPfBr19HPS3iUWLbOdPX1m4rvUfhfy90X6ovY-is_LgoATMnmt_pkP6TOodhddRp_IqocO4jOSk8xwK2XZGH2kMbdRjF-_iFFJq2cLW19SeO0SKpzaKfttVJLbcH8yXw0nYYS8cnJXAvxPkSr8">
+</div>
+<div class="flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-2">SUDHA VANAGAR</h2>
+<p class="font-code-sm text-on-surface-variant mb-4">[AGRICULTURE_LOGISTICS_OPTIMIZATION]</p>
+<p class="font-body-md text-on-surface mb-6 leading-relaxed">
+                            A next-gen logistics engine designed to bridge the gap between rural producers and urban markets. Features automated supply chain routing and real-time perishable goods tracking.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">LIVE_DEMO</button>
+<button class="bg-background text-on-background font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">SOURCE_CODE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2: Duck Hunt AI -->
+<div class="group relative bg-tertiary-container neo-brutalist-border p-6 md:p-10 neo-brutalist-shadow transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+<span class="absolute top-[-16px] left-8 bg-black text-white border-2 border-black px-4 py-1 font-label-bold z-10">COMPUTER_VISION</span>
+<div class="flex flex-col md:flex-row-reverse gap-8">
+<div class="w-full md:w-1/3 aspect-video bg-white neo-brutalist-border overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A high-speed computer vision capture of a retro video game environment. Neon green bounding boxes encircle fast-moving pixelated objects against a dark grid background. The aesthetic is heavily inspired by 80s arcade graphics blended with modern neural network visualization tools, using high-saturation yellows and blacks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtOSxvljv7Sj5WlvTVPmnqZhnINf1zY_dWsx1MOh9XU9QjzzDnmBLpD6BQEgSFH72Pva4xxiMZgE4ChHeeagPciqHXPOYkqusKHx7WpYZq6dwz3eWBFpjO3PtmP7K39e3C1zjeuOTIbPwbxcm9qe_m4uwU0_FYi84VcEY8OBKD44NkugxlpdozdLHUp-9NlqbFrkYXmfEQWtsyM4tBCFP4kEpvXqjLKrVeIeh0uCsGL9EteSR_rCO4gykmTBvkE8AXpB8l8hwJQ8o">
+</div>
+<div class="flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-2">DUCK HUNT AI</h2>
+<p class="font-code-sm text-tertiary mb-4">[PYTHON // OPENCV // NEURAL_NETS]</p>
+<p class="font-body-md text-on-surface mb-6 leading-relaxed">
+                            Autonomous object detection and tracking project utilizing OpenCV to solve spatial recognition tasks in real-time gaming environments with sub-millisecond latency.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-black text-white font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">DEMO_VIDEO</button>
+<button class="bg-background text-on-background font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">VIEW_REPO</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3: Yoga Tracker -->
+<div class="group relative bg-secondary-fixed neo-brutalist-border p-6 md:p-10 neo-brutalist-shadow transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+<span class="absolute top-[-16px] left-8 bg-secondary text-white border-2 border-black px-4 py-1 font-label-bold z-10">BIOMETRICS</span>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 aspect-video bg-white neo-brutalist-border overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A stylized biometric analysis screen showing a human silhouette with neon pink skeletal pose markers. Circular data visualizations and pulsing waves of light represent heartbeat and breathing patterns. The background is a clean white minimalist space with heavy black grid lines and bold typography, creating a medical-punk aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQJ5G7SbkSr0y-bC2r4FKUZ5qBCIkKxRUqo0g4OKF9UKmE4TdcW232HfFT96-_MX71vuOcbwMP1k6UKsNA2-Kb0YcjE-NiYhU0uVtDSnjj11noO0yD_JiNNYZkPaqcEuEqIc3UQePVW_wA-z5j1GvkBdzaafwSxnhhfb02fX3B_6HnSIDDoOWCZFndyjSr3ddri2EUkf-gEU4Ayy87s8uSjECZRhxyxRTp-7xQodqcmUr3Z51TBSn6DCWoQdkw9j_4zHIp1Ozcwq4">
+</div>
+<div class="flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-2">YOGA TRACKER</h2>
+<p class="font-code-sm text-secondary mb-4">[MEDIAPIPE // REALTIME_ANALYSIS]</p>
+<p class="font-body-md text-on-surface mb-6 leading-relaxed">
+                            Advanced biometric analysis tool that uses MediaPipe for pose estimation. Provides real-time feedback on yoga form and alignment, helping users prevent injuries.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-secondary text-white font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">OPEN_APP</button>
+<button class="bg-background text-on-background font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">SOURCE_CODE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 4: WebXAI -->
+<div class="group relative bg-primary-fixed neo-brutalist-border p-6 md:p-10 neo-brutalist-shadow transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+<span class="absolute top-[-16px] left-8 bg-primary text-white border-2 border-black px-4 py-1 font-label-bold z-10">AUTONOMOUS_AGENTS</span>
+<div class="flex flex-col md:flex-row-reverse gap-8">
+<div class="w-full md:w-1/3 aspect-video bg-white neo-brutalist-border overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A dark terminal screen with cascading lines of code in lime green. Abstract representations of digital crawlers or spiders are seen navigating through complex data structures. The UI features heavy borders and 'sticker' style tags indicating scraping tasks and AI reasoning loops, maintaining a high-tech underground hacker aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkMcA33M3C07Eehl5uFnwD2ryVxzoh5TRraj56odmA_u_zcqLf9yu8oE4jud5xMGrtM-fRQYwQNsZWLWROhO3Fk-NeerVjiaqM7pvbgEA0tI39dT4p9GOAFudZ1DGMTGTFeKISxH2G3kV5dh0tQQ3qyhJ_d-sEIB_9IL0bZk3qhd_FUKZ2sVhkIINj6pu4tSXHP9mwZXq5y0y143cQeaz63KlgMt_pjS9KXmJx2nR0VRUyiBZlMoTHEWK7NUn2FIyH_mD2S7XPQUo">
+</div>
+<div class="flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-2">WEBXAI</h2>
+<p class="font-code-sm text-primary mb-4">[CO-FOUNDED BY P. BHANU TEJA // SCRAPING // LLM_REASONING]</p>
+<p class="font-body-md text-on-surface mb-6 leading-relaxed">As Co-Founder, I led the development of this autonomous scraping and reasoning engine. It navigates the web with human-like intuition to extract and synthesize complex data points using state-of-the-art large language models.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">EXPLORE_AI</button>
+<button class="bg-background text-on-background font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">VIEW_DOCS</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 5: RamEditz -->
+<div class="group relative bg-surface-container-highest neo-brutalist-border p-6 md:p-10 neo-brutalist-shadow transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+<span class="absolute top-[-16px] left-8 bg-on-background text-white border-2 border-black px-4 py-1 font-label-bold z-10">WORKFLOW_ENGINE</span>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/3 aspect-video bg-white neo-brutalist-border overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A professional video editing interface reimagined with neo-brutalist design elements. Bold magenta timelines, thick black border panels, and chunky buttons for rendering and export. The workspace feels efficient and raw, with floating windows and monospace labels identifying content production stages and asset pipelines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfcu7KnTDaTzuOyicDilBo2bM1D5cAtO3sDWUMHfbhhAi2r7yPlXsFx1R7sh7NHov5g9743InDe2Pf6jEs3q4nnBcBKDY1lyv58pygdIxSDWZglMTBPIwxulJH2E6E2WHsIqEbGqqEXVVshFvWhPtlZGhoZNa0P_Vau2YvlFMBHzY_bpbZcMzabb6lmWZnv2cmQZbh1PLFdh0wiofa-bfDLmCsE3JAQvFU3vg9Or7AuM3U_X5usejHgBpM8QODN0Ej_R3BgY-wT_Q">
+</div>
+<div class="flex-1">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md mb-2">RAMEDITZ</h2>
+<p class="font-code-sm text-on-surface-variant mb-4">[CONTENT_AUTOMATION // WORKFLOW]</p>
+<p class="font-body-md text-on-surface mb-6 leading-relaxed">
+                            Integrated content production engine that automates post-production workflows for digital creators. Streamlines rendering, meta-tagging, and multi-platform distribution.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-on-background text-white font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">LAUNCH_FLOW</button>
+<button class="bg-background text-on-background font-label-bold px-6 py-3 neo-brutalist-border neo-brutalist-shadow-sm glitch-hover active:translate-x-1 active:translate-y-1 active:shadow-none">GITHUB</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-margin-mobile flex flex-col gap-gutter items-start bg-surface-container-highest border-t-4 border-on-background">
+<div class="flex flex-col gap-4">
+<h3 class="font-display-lg text-display-lg text-on-background">P. BHANU TEJA</h3>
+<p class="font-body-lg text-on-surface">FOUNDER @ GROWXAI // CO-FOUNDER @ WEBXAI // INNOVATOR // BUILDER</p>
+</div>
+<div class="flex flex-wrap gap-gutter mt-8">
+<a class="font-code-sm text-code-sm underline decoration-4 decoration-secondary hover:bg-primary hover:text-on-primary transition-colors p-1" href="#">GITHUB</a>
+<a class="font-code-sm text-code-sm underline decoration-4 decoration-secondary hover:bg-primary hover:text-on-primary transition-colors p-1" href="#">SOURCE</a>
+<a class="font-code-sm text-code-sm underline decoration-4 decoration-secondary hover:bg-primary hover:text-on-primary transition-colors p-1" href="#">MAIL</a>
+</div>
+<div class="mt-8 font-code-sm text-on-surface opacity-60 uppercase tracking-widest">
+            ©2024_TERMINAL_USR // LOC:HYDERABAD_TS
+        </div>
+</footer>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-20 px-2 pb-safe bg-primary border-t-4 border-on-background">
+<a class="flex flex-col items-center justify-center text-on-primary opacity-80 hover:bg-secondary transition-all w-1/4 h-full" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-bold text-label-bold">ROOT</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-tertiary text-on-tertiary border-2 border-on-background shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -translate-y-1 w-1/4 h-full" href="#">
+<span class="material-symbols-outlined">code</span>
+<span class="font-label-bold text-label-bold">CODE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-80 hover:bg-secondary transition-all w-1/4 h-full" href="#">
+<span class="material-symbols-outlined">biotech</span>
+<span class="font-label-bold text-label-bold">LABS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-primary opacity-80 hover:bg-secondary transition-all w-1/4 h-full" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-bold text-label-bold">INFO</span>
+</a>
+</nav>
+<!-- Floating UI Decoration -->
+<div class="fixed bottom-24 right-6 z-40 hidden md:block">
+<div class="bg-primary-container border-4 border-black p-4 neo-brutalist-shadow -rotate-6">
+<p class="font-label-bold">STATUS: RUNNING</p>
+<p class="font-code-sm">MEM: 1024GB</p>
+</div>
+</div>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('mousedown', () => {
+                button.classList.add('active-shadow-pressed');
+            });
+            button.addEventListener('mouseup', () => {
+                button.classList.remove('active-shadow-pressed');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('active-shadow-pressed');
+            });
+        });
+
+        // Sticker drifting effect
+        window.addEventListener('mousemove', (e) => {
+            const stickers = document.querySelectorAll('.sticker');
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+            
+            stickers.forEach((sticker, i) => {
+                const factor = (i + 1) * 10;
+                sticker.style.transform = `translate(${x * factor}px, ${y * factor}px) rotate(${i % 2 === 0 ? 12 : -3}deg)`;
+            });
+        });
+    </script>
+
+
+
+
+</body></html>

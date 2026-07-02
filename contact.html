@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TEJA // CONTACT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&amp;family=Syne:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config Verbatim -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "background": "#f9f9f9",
+                    "primary-fixed-dim": "#8fdb00",
+                    "on-tertiary-container": "#6c6c00",
+                    "tertiary-fixed-dim": "#cdcd00",
+                    "on-surface": "#1b1b1b",
+                    "on-primary-fixed": "#112000",
+                    "inverse-surface": "#303030",
+                    "on-primary-container": "#497300",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary-container": "#fffbff",
+                    "surface-dim": "#dadada",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#e10080",
+                    "outline-variant": "#c1caae",
+                    "tertiary-container": "#f0f000",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#8fdb00",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed": "#3e001f",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#8d004e",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#414a35",
+                    "secondary": "#b40065",
+                    "secondary-fixed-dim": "#ffb0ca",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f3f3",
+                    "surface": "#f9f9f9",
+                    "on-tertiary-fixed-variant": "#494900",
+                    "surface-bright": "#f9f9f9",
+                    "on-tertiary-fixed": "#1d1d00",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed": "#eaea00",
+                    "secondary-fixed": "#ffd9e3",
+                    "on-background": "#1b1b1b",
+                    "error-container": "#ffdad6",
+                    "primary": "#426900",
+                    "surface-tint": "#426900",
+                    "tertiary": "#626200",
+                    "primary-container": "#adff2f",
+                    "outline": "#717a62",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-variant": "#e2e2e2",
+                    "surface-container": "#eeeeee",
+                    "primary-fixed": "#a8f928",
+                    "on-primary-fixed-variant": "#314f00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "border-weight-thin": "2px",
+                    "border-weight-thick": "4px",
+                    "unit": "4px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Syne"],
+                    "body-lg": ["JetBrains Mono"],
+                    "body-md": ["JetBrains Mono"],
+                    "label-bold": ["JetBrains Mono"],
+                    "code-sm": ["JetBrains Mono"],
+                    "headline-md": ["Syne"],
+                    "display-2xl": ["Syne"],
+                    "display-lg-mobile": ["Syne"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "150%", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}],
+                    "label-bold": ["14px", {"lineHeight": "120%", "fontWeight": "700"}],
+                    "code-sm": ["12px", {"lineHeight": "140%", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "110%", "fontWeight": "700"}],
+                    "display-2xl": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "display-lg-mobile": ["42px", {"lineHeight": "100%", "fontWeight": "800"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .neo-shadow {
+            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-shadow-sm {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .neo-shadow-hover:active {
+            transform: translate(4px, 4px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+        }
+        .marquee {
+            white-space: nowrap;
+            overflow: hidden;
+            display: flex;
+        }
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .sticker-rotate {
+            transform: rotate(-3deg);
+        }
+        .sticker-rotate-alt {
+            transform: rotate(2deg);
+        }
+        .grid-pattern {
+            background-image: linear-gradient(#e5e5e5 1px, transparent 1px), linear-gradient(90deg, #e5e5e5 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Intensified Animations */
+        @keyframes boot-type {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            animation: boot-type 0.5s steps(20, end);
+        }
+
+        @keyframes energy-hum {
+            0% { transform: translate(0, 0); opacity: 0.95; }
+            25% { transform: translate(1px, -0.5px); }
+            50% { transform: translate(-1px, 1px); opacity: 1; }
+            75% { transform: translate(0.5px, 0.5px); }
+            100% { transform: translate(0, 0); opacity: 0.95; }
+        }
+        .btn-energy {
+            animation: energy-hum 0.1s infinite;
+        }
+
+        @keyframes signal-glitch {
+            0% { transform: translate(0); clip-path: inset(0 0 0 0); filter: hue-rotate(0deg); opacity: 1; }
+            20% { transform: translate(-5px, 5px); clip-path: inset(10% 0 40% 0); filter: hue-rotate(90deg); }
+            40% { transform: translate(5px, -5px); clip-path: inset(30% 0 20% 0); filter: invert(1); }
+            60% { transform: translate(-2px, 2px); clip-path: inset(50% 0 10% 0); }
+            80% { transform: translate(2px, -2px); clip-path: inset(0 0 60% 0); }
+            100% { transform: translate(0); clip-path: inset(0 0 0 0); filter: hue-rotate(0deg); opacity: 1; }
+        }
+        .glitch-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 9999;
+            pointer-events: none;
+            display: none;
+            backdrop-filter: contrast(150%) brightness(120%);
+        }
+        .glitch-active .glitch-overlay {
+            display: block;
+            animation: signal-glitch 0.3s steps(1) infinite;
+        }
+
+        .data-float {
+            position: absolute;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            color: rgba(66, 105, 0, 0.15);
+            pointer-events: none;
+            white-space: nowrap;
+            user-select: none;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container grid-pattern min-h-screen relative overflow-x-hidden">
+<div class="glitch-overlay" id="glitch-overlay"></div>
+<!-- Background Data Streams (Floating code blocks) -->
+<div class="fixed inset-0 pointer-events-none z-0" id="data-stream-container"></div>
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background border-b-border-weight-thick border-on-background">
+<div class="font-display-lg-mobile text-display-lg-mobile font-bold text-on-background flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="terminal">terminal</span>
+        P. BHANU TEJA // ROOT
+    </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="index.html">ROOT</a>
+<a class="font-body-md text-body-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="projects.html">CODE</a>
+<a class="font-body-md text-body-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="about.html">STORY</a>
+<a class="font-body-md text-body-md uppercase text-primary font-bold border-b-2 border-primary" href="contact.html">CONTACT</a>
+</nav>
+<button class="md:hidden">
+<span class="material-symbols-outlined text-4xl">menu</span>
+</button>
+</header>
+<main class="pt-32 pb-40 px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto relative overflow-hidden">
+<!-- Floating Stickers (Decoration) -->
+<div class="absolute top-20 right-10 hidden lg:block sticker-rotate bg-tertiary-container border-border-weight-thick border-on-background p-4 neo-shadow-sm font-code-sm text-code-sm z-0">
+        &lt;script&gt;alert('STAY_RADICAL');&lt;/script&gt;
+    </div>
+<div class="absolute bottom-20 left-0 hidden lg:block sticker-rotate-alt bg-secondary-container text-on-secondary-container border-border-weight-thick border-on-background p-4 neo-shadow-sm font-code-sm text-code-sm z-0">
+        [SYS_LOG] CONNECTION_ESTABLISHED
+    </div>
+<!-- Section 1: Header -->
+<section class="mb-20 relative z-10">
+<div class="inline-block bg-primary-container text-on-primary-container border-border-weight-thick border-on-background px-6 py-2 mb-6 neo-shadow-sm font-label-bold text-label-bold">
+            04_CONTACT
+        </div>
+<h1 class="font-display-2xl text-display-2xl md:text-[120px] uppercase tracking-tighter leading-none mb-8">
+            TEJA //<br/>
+<span class="text-secondary">CONTACT</span>
+</h1>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10">
+<!-- Section 2: Direct Links (Bento Left) -->
+<div class="lg:col-span-5 space-y-8">
+<p class="font-body-lg text-body-lg max-w-md bg-white p-6 border-border-weight-thick border-on-background neo-shadow">
+                Available for high-stakes digital architecture, experimental UI/UX deployments, and radical front-end collaborations. Choose your protocol:
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<a class="social-sticker group bg-primary-container p-6 border-border-weight-thick border-on-background neo-shadow neo-shadow-hover transition-all flex flex-col justify-between h-40" href="https://github.com/BhanuTejapothuru01" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-4xl" data-icon="code">code</span>
+<span class="font-display-lg text-headline-md uppercase">GITHUB</span>
+</a>
+<a class="social-sticker group bg-secondary-container text-on-secondary-container p-6 border-border-weight-thick border-on-background neo-shadow neo-shadow-hover transition-all flex flex-col justify-between h-40" href="https://www.linkedin.com/in/teja-pothuru-67b47a32b/" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-4xl" data-icon="share">share</span>
+<span class="font-display-lg text-headline-md uppercase">LINKEDIN</span>
+</a>
+<a class="social-sticker group bg-tertiary-container p-6 border-border-weight-thick border-on-background neo-shadow neo-shadow-hover transition-all flex flex-col justify-between h-40" href="https://x.com/tpothuru97055?s=11" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-4xl" data-icon="chat">chat</span>
+<span class="font-display-lg text-headline-md uppercase">X / TWITTER</span>
+</a>
+<a class="social-sticker group bg-on-background text-background p-6 border-border-weight-thick border-on-background neo-shadow neo-shadow-hover transition-all flex flex-col justify-between h-40" href="mailto:tejapothuru94413@gmail.com">
+<span class="material-symbols-outlined text-4xl" data-icon="mail">mail</span>
+<span class="font-display-lg text-headline-md uppercase">MAIL</span>
+</a>
+</div>
+<!-- Abstract Decorative Card -->
+<div class="bg-surface-variant border-border-weight-thick border-on-background p-8 neo-shadow relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-secondary opacity-10 group-hover:scale-150 transition-transform duration-700 rounded-full"></div>
+<h3 class="font-label-bold text-label-bold uppercase mb-4 text-primary typewriter">LATENCY_MODE</h3>
+<p class="font-code-sm text-code-sm leading-relaxed">
+                    I respond to all valid packets within 24-48 hours. Secure communication preferred. Encryption available upon request.
+                </p>
+</div>
+</div>
+<!-- Section 3: Message Terminal (Form) -->
+<div class="lg:col-span-7">
+<div class="bg-on-background border-border-weight-thick border-on-background neo-shadow overflow-hidden">
+<!-- Terminal Header -->
+<div class="bg-surface-container-highest flex items-center justify-between px-4 py-2 border-b-border-weight-thick border-on-background">
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-error border border-black"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary border border-black"></div>
+<div class="w-3 h-3 rounded-full bg-primary-fixed-dim border border-black"></div>
+</div>
+<div class="font-code-sm text-code-sm opacity-60 typewriter">root@teja:~/contact_portal</div>
+</div>
+<!-- Terminal Form Body -->
+<form class="p-8 space-y-8">
+<div>
+<label class="block font-label-bold text-label-bold text-primary-container uppercase mb-2 typewriter">USR_NAME &gt;</label>
+<input class="w-full bg-on-background text-primary-container border-b-2 border-primary-container focus:border-secondary p-4 font-body-md outline-none placeholder:text-primary/30 transition-all" placeholder="WHO_ARE_YOU?" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary-container uppercase mb-2 typewriter">USR_EMAIL &gt;</label>
+<input class="w-full bg-on-background text-primary-container border-b-2 border-primary-container focus:border-secondary p-4 font-body-md outline-none placeholder:text-primary/30 transition-all" placeholder="WHERE_CAN_I_PING_BACK?" type="email"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-primary-container uppercase mb-2 typewriter">MSG_PAYLOAD &gt;</label>
+<textarea class="w-full bg-on-background text-primary-container border-2 border-primary-container focus:border-secondary p-4 font-body-md outline-none placeholder:text-primary/30 transition-all resize-none" placeholder="INITIALIZE_COMMUNICATION..." rows="5"></textarea>
+</div>
+<div class="flex items-center justify-between pt-4">
+<div class="font-code-sm text-code-sm text-surface-variant flex items-center gap-2">
+<span class="animate-pulse w-2 h-4 bg-primary-container"></span>
+                            READY_FOR_TX
+                        </div>
+<button class="btn-energy bg-primary-container text-on-primary-container px-8 py-4 border-border-weight-thick border-on-background font-label-bold text-label-bold uppercase neo-shadow-sm hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all flex items-center gap-2" type="submit">
+                            EXECUTE_SEND <span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Secondary Image Sticker -->
+<div class="mt-8 flex justify-end">
+<div class="bg-white border-border-weight-thick border-on-background p-2 neo-shadow sticker-rotate-alt w-64">
+<img class="w-full grayscale contrast-125 mb-2" data-alt="A neo-brutalist digital collage featuring abstract circuit board patterns, high-contrast black and white photography of a modern server room, and neon green floating code snippets. The style is raw, edgy, and technical with heavy black borders and a vibrant experimental layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK9C8RZDwekZpTMOok_RGc7Gl6vsFeegZi3JW9RNJ6dpqcZseg55pkwfpoRkk5zCFRzgqAjJrCCNiZm8SC_w5oYAtMq-2urQIlgjcD8Dmuynj_t0E9uMeZDlw2hEk-bLr-yCq8Wjdo1Qyh33q9Q8vtrpvzE--h-0OINLSkzr6PVNGYt15fdWiX8S3a4Q6xQTDOvHOBE3ADk8HYM2c55AwwR_d1cSYqbOyijauP4Q-hLnTSb5yhoo6h7RN0e-uRJ49iKYnpiRvlG7M"/>
+<div class="text-center font-code-sm text-[10px] uppercase opacity-50">IMG_REF_9921_SYS</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Section 4: Footer Marquee -->
+<footer class="fixed bottom-0 left-0 w-full z-40 bg-background border-t-border-weight-thick border-on-background">
+<div class="marquee py-4 bg-secondary-container border-b-border-weight-thick border-on-background overflow-hidden">
+<div class="marquee-content gap-12 items-center flex">
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">STAY RADICAL //</span>
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">P. BHANU TEJA //</span>
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">CODE THE FUTURE //</span>
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">BREAK THE GRID //</span>
+<!-- Duplicate for loop -->
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">STAY RADICAL //</span>
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">P. BHANU TEJA //</span>
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">CODE THE FUTURE //</span>
+<span class="font-display-lg text-headline-md text-on-secondary-container uppercase whitespace-nowrap">BREAK THE GRID //</span>
+</div>
+</div>
+<!-- Mobile Bottom Nav Shell Logic -->
+<div class="md:hidden flex justify-around items-center px-4 pb-6 pt-2 bg-background">
+<a class="flex flex-col items-center justify-center text-on-background px-4 py-2 opacity-50" href="index.html">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-label-bold text-label-bold uppercase">ROOT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-background px-4 py-2 opacity-50" href="projects.html">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+<span class="font-label-bold text-label-bold uppercase">CODE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-background px-4 py-2 opacity-50" href="about.html">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-label-bold text-label-bold uppercase">STORY</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary border-border-weight-thin border-on-background px-4 py-2 translate-x-[-4px] translate-y-[-4px] shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]" href="contact.html">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+<span class="font-label-bold text-label-bold uppercase">CONTACT</span>
+</a>
+</div>
+</footer>
+<script>
+    // Signal Loss Glitch Feedback
+    const socialLinks = document.querySelectorAll('.social-sticker');
+    const body = document.body;
+    
+    socialLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            body.classList.add('glitch-active');
+            setTimeout(() => {
+                body.classList.remove('glitch-active');
+            }, 400);
+        });
+    });
+
+    // Background Data Streams & Parallax
+    const dataStreamContainer = document.getElementById('data-stream-container');
+    const codeSnippets = [
+        "const flow = async () => {}",
+        "0x426900 // PRIMARY",
+        "system.status = 'READY'",
+        "ping -t cloud_node",
+        "fetch('data/stream')",
+        "git commit -m 'radical'",
+        "while(alive) { build() }",
+        "import { chaos } from 'ui'"
+    ];
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    function createDataSnippet() {
+        const snippet = document.createElement('div');
+        snippet.className = 'data-float';
+        snippet.innerText = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+        
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * window.innerHeight;
+        snippet.style.left = `${startX}px`;
+        snippet.style.top = `${startY}px`;
+        
+        dataStreamContainer.appendChild(snippet);
+        
+        let driftX = (Math.random() - 0.5) * 2;
+        let driftY = (Math.random() - 0.5) * 2;
+        let opacity = 0.1 + Math.random() * 0.1;
+        snippet.style.opacity = opacity;
+
+        const update = () => {
+            const currentX = parseFloat(snippet.style.left);
+            const currentY = parseFloat(snippet.style.top);
+            
+            // Basic float drift
+            let nextX = currentX + driftX;
+            let nextY = currentY + driftY;
+            
+            // Interactive offset (subtle response to scroll/mouse/orientation)
+            const scrollOffset = window.scrollY * 0.05;
+            
+            // Screen wrapping
+            if (nextX < -200) nextX = window.innerWidth + 50;
+            if (nextX > window.innerWidth + 200) nextX = -150;
+            if (nextY < -50) nextY = window.innerHeight + 50;
+            if (nextY > window.innerHeight + 50) nextY = -50;
+
+            snippet.style.left = `${nextX}px`;
+            snippet.style.top = `${nextY - (scrollOffset % 100)}px`;
+            
+            requestAnimationFrame(update);
+        };
+        update();
+    }
+
+    // Initialize snippets
+    for(let i = 0; i < 15; i++) {
+        createDataSnippet();
+    }
+
+    // Handle orientation if mobile
+    if (window.DeviceOrientationEvent) {
+        window.addEventListener('deviceorientation', (event) => {
+            const tiltX = event.gamma; // -90 to 90
+            const tiltY = event.beta;  // -180 to 180
+            dataStreamContainer.style.transform = `translate(${tiltX * 0.2}px, ${tiltY * 0.2}px)`;
+        });
+    }
+
+    // Simple micro-interaction for form inputs
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+            input.parentElement.querySelector('label').classList.add('text-secondary');
+        });
+        input.addEventListener('blur', () => {
+            input.parentElement.querySelector('label').classList.remove('text-secondary');
+        });
+    });
+
+    // Form submission effect
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = 'TRANSMITTING...';
+        btn.classList.add('bg-secondary', 'text-white');
+        btn.classList.remove('btn-energy'); // Stop humming on click
+        
+        const name = e.target.querySelector('input[type="text"]').value;
+        const email = e.target.querySelector('input[type="email"]').value;
+        const message = e.target.querySelector('textarea').value;
+        const text = `Hi, I am ${name} (${email}). ${message}`;
+        const whatsappUrl = `https://wa.me/918143321769?text=${encodeURIComponent(text)}`;
+        
+        setTimeout(() => {
+            btn.innerHTML = 'SUCCESS_ACK';
+            btn.classList.remove('bg-secondary');
+            btn.classList.add('bg-primary');
+            window.open(whatsappUrl, '_blank');
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('btn-energy');
+                e.target.reset();
+            }, 2000);
+        }, 1500);
+    });
+</script>
+</body></html>

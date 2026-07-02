@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TEJA POTHURU // STORY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb0ca",
+                    "tertiary": "#626200",
+                    "secondary-fixed": "#ffd9e3",
+                    "on-primary-fixed": "#112000",
+                    "inverse-primary": "#8fdb00",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#8fdb00",
+                    "on-secondary-fixed-variant": "#8d004e",
+                    "surface-bright": "#ffffff",
+                    "outline": "#1b1b1b",
+                    "surface-container-high": "#f0f0f0",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#ffffff",
+                    "background": "#ffffff",
+                    "on-surface": "#1b1b1b",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-container": "#adff2f",
+                    "on-tertiary-container": "#6c6c00",
+                    "on-surface-variant": "#1b1b1b",
+                    "on-primary-container": "#000000",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#eaea00",
+                    "on-tertiary-fixed-variant": "#494900",
+                    "surface-tint": "#426900",
+                    "on-tertiary-fixed": "#1d1d00",
+                    "secondary": "#b40065",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "inverse-surface": "#303030",
+                    "surface-container-highest": "#e8e8e8",
+                    "surface-dim": "#eeeeee",
+                    "primary": "#426900",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#a8f928",
+                    "on-background": "#1b1b1b",
+                    "tertiary-fixed-dim": "#cdcd00",
+                    "outline-variant": "#1b1b1b",
+                    "on-secondary-fixed": "#3e001f",
+                    "surface-container": "#ffffff",
+                    "surface-variant": "#ffffff",
+                    "on-primary-fixed-variant": "#314f00",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#e10080",
+                    "surface": "#ffffff",
+                    "tertiary-container": "#f0f000",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "border-weight-thin": "2px",
+                    "margin-desktop": "48px",
+                    "border-weight-thick": "4px"
+            },
+            "fontFamily": {
+                    "display-2xl": ["Syne"],
+                    "display-lg-mobile": ["Syne"],
+                    "display-lg": ["Syne"],
+                    "body-lg": ["JetBrains Mono"],
+                    "label-bold": ["JetBrains Mono"],
+                    "code-sm": ["JetBrains Mono"],
+                    "headline-md": ["Syne"],
+                    "body-md": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "display-2xl": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "display-lg-mobile": ["42px", {"lineHeight": "100%", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "150%", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "120%", "fontWeight": "700"}],
+                    "code-sm": ["12px", {"lineHeight": "140%", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "110%", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        .scanlines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(255, 255, 255, 0) 50%,
+                rgba(0, 0, 0, 0.05) 50%
+            );
+            background-size: 100% 4px;
+            z-index: 10;
+            pointer-events: none;
+            animation: grain 8s steps(10) infinite;
+        }
+        @keyframes grain {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-1%, -1%); }
+            30% { transform: translate(1%, -1%); }
+            50% { transform: translate(-1%, 1%); }
+            70% { transform: translate(1%, 1%); }
+            90% { transform: translate(-1%, -1%); }
+        }
+        .neo-shadow-sm { box-shadow: 4px 4px 0px 0px rgba(0,0,0,1); }
+        .neo-shadow-md { box-shadow: 8px 8px 0px 0px rgba(0,0,0,1); }
+        .neo-shadow-xl { box-shadow: 12px 12px 0px 0px rgba(0,0,0,1); }
+        
+        .marquee-content {
+            display: flex;
+            animation: marquee 20s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        
+        .clunk-card {
+            transition: all 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .clunk-card:hover, .clunk-card:active {
+            transform: translate(-6px, -6px);
+            box-shadow: 14px 14px 0px 0px rgba(0,0,0,1);
+        }
+        .clunk-card:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px 0px rgba(0,0,0,1);
+        }
+
+        .vibrate {
+            animation: vibrate 0.3s linear infinite;
+        }
+        @keyframes vibrate {
+            0% { transform: translate(0, 0); }
+            25% { transform: translate(2px, -2px); }
+            50% { transform: translate(-2px, 2px); }
+            75% { transform: translate(2px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        .jitter {
+            animation: jitter 0.5s ease-in-out infinite;
+        }
+        @keyframes jitter {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(3deg); }
+            75% { transform: rotate(-3deg); }
+        }
+
+        .glitch-btn:hover {
+            animation: glitch 0.2s linear infinite;
+        }
+        @keyframes glitch {
+            0% { transform: translate(0); }
+            20% { transform: translate(-4px, 4px); }
+            40% { transform: translate(-4px, -4px); }
+            60% { transform: translate(4px, 4px); }
+            80% { transform: translate(4px, -4px); }
+            100% { transform: translate(0); }
+        }
+
+        .terminal-border {
+            border: 4px solid #1b1b1b;
+            position: relative;
+        }
+        
+        .neon-gradient-text {
+            background: linear-gradient(90deg, #ADFF2F, #FF1493, #00FFFF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: textGradient 5s linear infinite;
+        }
+        @keyframes textGradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .floating-sticker {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+            opacity: 0.15;
+            animation: drift var(--duration) linear infinite;
+        }
+        @keyframes drift {
+            from { transform: translate(var(--startX), var(--startY)) rotate(0deg); }
+            to { transform: translate(var(--endX), var(--endY)) rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-background min-h-screen pb-32">
+<div class="fixed inset-0 w-full h-full z-0 opacity-60">
+<canvas id="shader-canvas-ANIMATION_12" style="display:block;width:100%;height:100%"></canvas>
+</div>
+<div class="scanlines"></div>
+<!-- Drifting Stickers -->
+<div class="floating-sticker" style="--startX:-10vw; --startY:20vh; --endX:110vw; --endY:80vh; --duration:25s;"><span class="material-symbols-outlined text-[80px]">smart_toy</span></div>
+<div class="floating-sticker" style="--startX:110vw; --startY:10vh; --endX:-10vw; --endY:90vh; --duration:35s;"><span class="material-symbols-outlined text-[60px]">rocket_launch</span></div>
+<div class="floating-sticker" style="--startX:40vw; --startY:-10vh; --endX:60vw; --endY:110vh; --duration:45s;"><span class="material-symbols-outlined text-[70px]">database</span></div>
+<div class="relative z-20">
+<!-- TopAppBar -->
+<header class="bg-background border-b-8 border-on-background flex justify-between items-center px-4 md:px-12 w-full py-6 sticky top-0 z-[60]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-4xl">memory</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile font-bold text-on-background">TEJA.SYS</h1>
+</div>
+<div class="hidden md:flex gap-8">
+<a class="font-body-md text-body-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">ROOT</a>
+<a class="font-body-md text-body-md uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">CODE</a>
+<a class="font-body-md text-body-md uppercase text-primary font-bold underline decoration-4 underline-offset-8" href="#">STORY</a>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 md:px-12 py-12 space-y-32">
+<!-- 1. Hero Section -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="space-y-8">
+<div class="inline-block bg-primary-container border-4 border-on-background px-4 py-1 font-label-bold text-sm uppercase neo-shadow-sm rotate-[-2deg]">SYSTEM_INITIALIZED</div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg leading-[0.9] text-on-background">
+                BUILDING SOFTWARE THAT SOLVES <span class="bg-secondary-container text-on-secondary px-2">REAL PROBLEMS.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                I’m Teja Pothuru, a software developer, AI automation enthusiast, and founder of GrowXAI.
+            </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary border-4 border-on-background px-8 py-4 font-label-bold text-xl neo-shadow-md clunk-card uppercase">View Projects</button>
+</div>
+</div>
+<div class="relative">
+<div class="border-8 border-on-background bg-white p-4 neo-shadow-xl rotate-[3deg] transition-transform hover:rotate-0 duration-300">
+<img alt="Teja Pothuru Portrait" class="w-full aspect-[4/5] object-cover grayscale brightness-90 hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7PUBfUokK0YqOF2Fg5rHMtvE-8vsw2dbePEf2_YPlPvbw4ZhQLNh8iMCnUzzLdlNBBH6dGMYpFlBU3Rd1MHxwdlBONFwNOyfKe0xMuU2yiA7U-37O2KDecU-t4TDQH989lN9QJNv1MjCGFdgrQuPhF3vzmxAsFKJAvU_9Sw5arUNcift--BSlvKesAUdqN7NV5Yoi2FB9pMKK_13nICij3L0UWf0xzuIPWhxtX5KSLpNfiKPpPhMPlmzVkkeSIiGUI8yA68kUCwI"/>
+<div class="absolute -top-8 -right-8 bg-tertiary-container border-4 border-on-background px-8 py-4 font-display-lg-mobile text-2xl rotate-12 neo-shadow-sm jitter">FOUNDER</div>
+</div>
+</div>
+</section>
+<!-- 2. My Story -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-12 border-t-8 border-on-background pt-16">
+<div class="md:col-span-5">
+<h3 class="font-display-lg-mobile text-5xl uppercase tracking-tighter mb-8">THE_JOURNEY.LOG</h3>
+<div class="bg-on-background text-white p-8 border-4 border-primary neo-shadow-md">
+<p class="font-code-sm text-lg leading-relaxed">
+                    "Every Great Journey Starts With One Decision... What began as curiosity slowly turned into building websites, experimenting with AI, and developing SaaS."
+                </p>
+</div>
+</div>
+<div class="md:col-span-7 space-y-6">
+<div class="border-4 border-on-background p-8 bg-surface-container-low terminal-border neo-shadow-sm">
+<div class="flex gap-2 mb-4">
+<div class="w-3 h-3 rounded-full bg-red-500 border border-on-background"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-500 border border-on-background"></div>
+<div class="w-3 h-3 rounded-full bg-green-500 border border-on-background"></div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant italic">
+                    Based in the digital frontier, I've spent thousands of hours debugging reality and crafting scalable architectures. GrowXAI is the culmination of that effort—merging human strategy with machine efficiency.
+                </p>
+</div>
+</div>
+</section>
+<!-- 3. What I Do (Services) -->
+<section class="space-y-12">
+<h3 class="font-display-lg-mobile text-4xl text-center underline decoration-primary decoration-8 underline-offset-8">CORE_CAPABILITIES</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
+<!-- Web Dev -->
+<div class="bg-primary-container border-4 border-on-background p-6 neo-shadow-md clunk-card min-h-[200px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">language</span>
+<h4 class="font-label-bold text-lg mt-4">Web Development</h4>
+</div>
+<!-- SaaS -->
+<div class="bg-secondary-fixed border-4 border-on-background p-6 neo-shadow-md clunk-card min-h-[200px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">layers</span>
+<h4 class="font-label-bold text-lg mt-4">SaaS Applications</h4>
+</div>
+<!-- AI -->
+<div class="bg-tertiary-container border-4 border-on-background p-6 neo-shadow-md clunk-card min-h-[200px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">psychology</span>
+<h4 class="font-label-bold text-lg mt-4">AI Automation</h4>
+</div>
+<!-- UI/UX -->
+<div class="bg-primary-fixed-dim border-4 border-on-background p-6 neo-shadow-md clunk-card min-h-[200px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">draw</span>
+<h4 class="font-label-bold text-lg mt-4">UI/UX Design</h4>
+</div>
+<!-- Backend -->
+<div class="bg-secondary-container text-on-secondary border-4 border-on-background p-6 neo-shadow-md clunk-card min-h-[200px] flex flex-col justify-between">
+<span class="material-symbols-outlined text-4xl">terminal</span>
+<h4 class="font-label-bold text-lg mt-4">Backend Development</h4>
+</div>
+</div>
+</section>
+<!-- 4. Technologies (Toolkit) -->
+<section class="bg-on-background text-white p-12 -mx-4 md:-mx-12">
+<h3 class="font-display-lg-mobile text-3xl mb-12 text-primary">TECH_STACK // CURRENT_VERSION</h3>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+<div class="space-y-4">
+<div class="font-code-sm text-xs text-primary border-b border-primary pb-2 uppercase tracking-widest">Frontend</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white text-xs jitter">NEXT.JS</span>
+<span class="px-3 py-1 border border-white text-xs jitter">REACT</span>
+<span class="px-3 py-1 border border-white text-xs jitter">TAILWIND</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="font-code-sm text-xs text-primary border-b border-primary pb-2 uppercase tracking-widest">Backend</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white text-xs jitter">NODE.JS</span>
+<span class="px-3 py-1 border border-white text-xs jitter">PYTHON</span>
+<span class="px-3 py-1 border border-white text-xs jitter">GO</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="font-code-sm text-xs text-primary border-b border-primary pb-2 uppercase tracking-widest">Database</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white text-xs jitter">POSTGRES</span>
+<span class="px-3 py-1 border border-white text-xs jitter">REDIS</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="font-code-sm text-xs text-primary border-b border-primary pb-2 uppercase tracking-widest">Tools</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white text-xs jitter">DOCKER</span>
+<span class="px-3 py-1 border border-white text-xs jitter">AWS</span>
+</div>
+</div>
+<div class="space-y-4">
+<div class="font-code-sm text-xs text-primary border-b border-primary pb-2 uppercase tracking-widest">AI</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 border border-white text-xs jitter">OPENAI</span>
+<span class="px-3 py-1 border border-white text-xs jitter">LANGCHAIN</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. My Philosophy -->
+<section class="text-center py-16 space-y-12 bg-surface-container border-y-8 border-on-background -mx-4 md:-mx-12">
+<h3 class="font-display-2xl text-display-lg-mobile md:text-display-lg uppercase leading-tight px-4">
+            I DON’T BUILD WEBSITES. <span class="block neon-gradient-text italic">I BUILD EXPERIENCES.</span>
+</h3>
+<div class="max-w-2xl mx-auto px-4">
+<ul class="text-left space-y-6">
+<li class="flex items-start gap-4">
+<span class="bg-on-background text-white px-2 font-code-sm">01</span>
+<p class="font-body-lg font-bold">STORY: Every project must have a narrative.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="bg-on-background text-white px-2 font-code-sm">02</span>
+<p class="font-body-lg font-bold">PROBLEMS: If it doesn't solve one, it shouldn't exist.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="bg-on-background text-white px-2 font-code-sm">03</span>
+<p class="font-body-lg font-bold">TIME: Speed is a feature, not an afterthought.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="bg-on-background text-white px-2 font-code-sm">04</span>
+<p class="font-body-lg font-bold">TRUST: Code is the bridge between user and solution.</p>
+</li>
+<li class="flex items-start gap-4">
+<span class="bg-on-background text-white px-2 font-code-sm">05</span>
+<p class="font-body-lg font-bold">GROWTH: Scale is built into the first line of code.</p>
+</li>
+</ul>
+</div>
+</section>
+<!-- 6. My Process -->
+<section class="max-w-3xl mx-auto space-y-12">
+<h3 class="font-display-lg-mobile text-4xl">DEPLOYMENT_STAGES</h3>
+<div class="space-y-0 border-l-8 border-on-background ml-4">
+<div class="relative pl-12 pb-12">
+<div class="absolute -left-[20px] top-0 w-8 h-8 bg-primary-container border-4 border-on-background"></div>
+<h4 class="font-label-bold text-2xl uppercase">01 Research</h4>
+<p class="font-code-sm text-on-surface-variant">Gathering requirements &amp; identifying bottlenecks.</p>
+</div>
+<div class="relative pl-12 pb-12">
+<div class="absolute -left-[20px] top-0 w-8 h-8 bg-secondary-fixed border-4 border-on-background"></div>
+<h4 class="font-label-bold text-2xl uppercase">02 Strategy</h4>
+<p class="font-code-sm text-on-surface-variant">Defining architecture &amp; core algorithms.</p>
+</div>
+<div class="relative pl-12 pb-12">
+<div class="absolute -left-[20px] top-0 w-8 h-8 bg-tertiary-container border-4 border-on-background"></div>
+<h4 class="font-label-bold text-2xl uppercase">03 Design</h4>
+<p class="font-code-sm text-on-surface-variant">Visualizing interfaces &amp; user flow maps.</p>
+</div>
+<div class="relative pl-12 pb-12">
+<div class="absolute -left-[20px] top-0 w-8 h-8 bg-primary border-4 border-on-background"></div>
+<h4 class="font-label-bold text-2xl uppercase text-primary">04 Development</h4>
+<p class="font-code-sm text-on-surface-variant">Writing optimized, production-ready code.</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute -left-[20px] top-0 w-8 h-8 bg-on-background border-4 border-on-background"></div>
+<h4 class="font-label-bold text-2xl uppercase">05 Launch</h4>
+<p class="font-code-sm text-on-surface-variant">Quality assurance &amp; global deployment.</p>
+</div>
+</div>
+</section>
+<!-- 7. Numbers (Stats) -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4 border-8 border-on-background p-8 bg-white neo-shadow-md">
+<div class="text-center p-4">
+<div class="font-display-lg text-4xl md:text-6xl vibrate text-primary">10+</div>
+<div class="font-label-bold text-xs uppercase">Projects Built</div>
+</div>
+<div class="text-center p-4">
+<div class="font-display-lg text-4xl md:text-6xl vibrate text-secondary">20+</div>
+<div class="font-label-bold text-xs uppercase">Technologies</div>
+</div>
+<div class="text-center p-4 border-t-4 md:border-t-0 md:border-l-4 border-on-background">
+<div class="font-display-lg text-4xl md:text-6xl vibrate text-on-surface">100K+</div>
+<div class="font-label-bold text-xs uppercase">Lines of Code</div>
+</div>
+<div class="text-center p-4 border-t-4 md:border-t-0 md:border-l-4 border-on-background">
+<div class="font-display-lg text-4xl md:text-6xl vibrate text-tertiary">∞</div>
+<div class="font-label-bold text-xs uppercase">Coffee Units</div>
+</div>
+</section>
+<!-- 8. Beyond Coding (Personal Log) -->
+<section class="bg-secondary-fixed border-4 border-on-background p-10 neo-shadow-md relative overflow-hidden">
+<div class="absolute -top-10 -right-10 opacity-10">
+<span class="material-symbols-outlined text-[300px]">auto_stories</span>
+</div>
+<div class="relative z-10 space-y-6">
+<h3 class="font-display-lg-mobile text-4xl uppercase underline decoration-4 underline-offset-4">Personal_Log.md</h3>
+<p class="font-body-lg text-body-lg text-on-surface max-w-2xl leading-relaxed">
+                When I'm not deep-diving into Git repos, I'm exploring the philosophical implications of artificial general intelligence and scaling <span class="font-bold underline">GrowXAI</span>. My mission is to bridge the gap between complex tech and human growth.
+            </p>
+<div class="flex gap-4">
+<span class="px-4 py-2 bg-on-background text-white font-code-sm">AI_OBSESSED</span>
+<span class="px-4 py-2 bg-white border-2 border-on-background font-code-sm">FOUNDER_MODE</span>
+</div>
+</div>
+</section>
+<!-- 9. Final CTA -->
+<section class="text-center py-24 space-y-12">
+<h3 class="font-display-lg text-display-lg-mobile md:text-display-lg uppercase">LET’S BUILD SOMETHING <span class="bg-primary-container px-4">AMAZING.</span></h3>
+<p class="font-headline-md text-2xl uppercase tracking-widest text-on-surface-variant">Build. Automate. Scale.</p>
+<div class="flex justify-center">
+<button class="glitch-btn bg-on-background text-white border-8 border-primary px-12 py-8 font-display-lg-mobile text-3xl neo-shadow-xl flex items-center gap-4">
+                START_PROJECT <span class="material-symbols-outlined text-4xl">trending_flat</span>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-[70] flex justify-around items-center px-4 pb-8 pt-4 border-t-8 border-on-background bg-white h-28">
+<a class="flex flex-col items-center justify-center text-on-background px-6 py-2 group active:translate-x-1 active:translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">home</span>
+<span class="font-label-bold text-label-bold">ROOT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-background px-6 py-2 group active:translate-x-1 active:translate-y-1 transition-all" href="#">
+<span class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">code</span>
+<span class="font-label-bold text-label-bold">CODE</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-white border-4 border-on-background px-8 py-3 translate-x-[-4px] translate-y-[-4px] shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] active:translate-x-0 active:translate-y-0 transition-all duration-100" href="#">
+<span class="material-symbols-outlined text-4xl">alternate_email</span>
+<span class="font-label-bold text-label-bold uppercase">Contact</span>
+</a>
+</nav>
+</div>
+<!-- Shader Script -->
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_12');
+  function syncSize() {
+    const w = canvas.clientWidth  || window.innerWidth;
+    const h = canvas.clientHeight || window.innerHeight;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position; varying vec2 v_texCoord; void main() { v_texCoord = a_position * 0.5 + 0.5; gl_Position = vec4(a_position, 0.0, 1.0); }`;
+  const fs = `precision highp float; uniform float u_time; uniform vec2 u_resolution; varying vec2 v_texCoord; float hash(vec2 p) { return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123); } void main() { vec2 uv = v_texCoord; vec2 p = uv; p.y -= u_time * 0.4; vec2 grid = vec2(40.0, 20.0); vec2 g_id = floor(uv * grid); float speed = hash(vec2(g_id.x, 0.0)) * 1.5 + 0.5; float stream = fract(uv.y * 1.2 - u_time * speed + hash(vec2(g_id.x))); stream = smoothstep(0.7, 1.0, stream); vec3 col = mix(vec3(1.0), vec3(0.67, 1.0, 0.18), stream * 0.2); gl_FragColor = vec4(col, 1.0); }`;
+  function cs(type, src) { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); return s; }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog); gl.useProgram(prog);
+  const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position'); gl.enableVertexAttribArray(pos); gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  function render(t) { gl.viewport(0, 0, canvas.width, canvas.height); if (uTime) gl.uniform1f(uTime, t * 0.001); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); requestAnimationFrame(render); }
+  render(0);
+})();
+</script>
+</body></html>

@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>P. BHANU TEJA // ROOT</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#ffb0ca",
+                    "tertiary": "#626200",
+                    "secondary-fixed": "#ffd9e3",
+                    "on-primary-fixed": "#112000",
+                    "inverse-primary": "#8fdb00",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#8fdb00",
+                    "on-secondary-fixed-variant": "#8d004e",
+                    "surface-bright": "#ffffff",
+                    "outline": "#1b1b1b",
+                    "surface-container-high": "#f5f5f5",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#ffffff",
+                    "background": "#ffffff",
+                    "on-surface": "#1b1b1b",
+                    "inverse-on-surface": "#f1f1f1",
+                    "primary-container": "#adff2f",
+                    "on-tertiary-container": "#6c6c00",
+                    "on-surface-variant": "#1b1b1b",
+                    "on-primary-container": "#112000",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#eaea00",
+                    "on-tertiary-fixed-variant": "#494900",
+                    "surface-tint": "#426900",
+                    "on-tertiary-fixed": "#1d1d00",
+                    "secondary": "#b40065",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#fffbff",
+                    "inverse-surface": "#303030",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-dim": "#eeeeee",
+                    "primary": "#426900",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#a8f928",
+                    "on-background": "#1b1b1b",
+                    "tertiary-fixed-dim": "#cdcd00",
+                    "outline-variant": "#c1caae",
+                    "on-secondary-fixed": "#3e001f",
+                    "surface-container": "#f9f9f9",
+                    "surface-variant": "#f0f000",
+                    "on-primary-fixed-variant": "#314f00",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#e10080",
+                    "surface": "#ffffff",
+                    "tertiary-container": "#f0f000",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "unit": "4px",
+                    "border-weight-thin": "2px",
+                    "margin-desktop": "48px",
+                    "border-weight-thick": "4px"
+            },
+            "fontFamily": {
+                    "display-2xl": ["Syne"],
+                    "display-lg-mobile": ["Syne"],
+                    "display-lg": ["Syne"],
+                    "body-lg": ["JetBrains Mono"],
+                    "label-bold": ["JetBrains Mono"],
+                    "code-sm": ["JetBrains Mono"],
+                    "headline-md": ["Syne"],
+                    "body-md": ["JetBrains Mono"]
+            },
+            "fontSize": {
+                    "display-2xl": ["96px", {"lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                    "display-lg-mobile": ["42px", {"lineHeight": "100%", "fontWeight": "800"}],
+                    "display-lg": ["64px", {"lineHeight": "100%", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-lg": ["18px", {"lineHeight": "150%", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "120%", "fontWeight": "700"}],
+                    "code-sm": ["12px", {"lineHeight": "140%", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "110%", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "150%", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 15s linear infinite;
+        }
+        .neo-shadow-sm {
+            box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+        }
+        .neo-shadow-md {
+            box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+        }
+        .card-clunk {
+            transition: transform 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .card-clunk:hover, .card-clunk:active {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0 0 rgba(0, 0, 0, 1), 16px 16px 0 0 #b40065;
+        }
+        .active-nav-shadow {
+            box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 1);
+        }
+        @keyframes glitch-shake {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 1px); }
+            40% { transform: translate(-2px, -1px); }
+            60% { transform: translate(2px, 1px); }
+            80% { transform: translate(2px, -1px); }
+            100% { transform: translate(0); }
+        }
+        .glitch-nav {
+            animation: glitch-shake 0.15s infinite;
+            box-shadow: 4px 4px 0 0 rgba(180, 0, 101, 1);
+        }
+        .reveal-item {
+            opacity: 0;
+            transform: scale(0.9) translateY(40px);
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .reveal-item.active {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+        .reveal-item.glitch-flash {
+            animation: glitch-flash 0.4s steps(2);
+        }
+        @keyframes glitch-flash {
+            0%, 100% { filter: invert(0); }
+            50% { filter: invert(1); }
+        }
+        #custom-cursor {
+            width: 30px;
+            height: 30px;
+            border: 3px solid #b40065;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            z-index: 100;
+            transition: transform 0.1s ease-out;
+            mix-blend-mode: difference;
+        }
+        .cursor-trail {
+            position: fixed;
+            pointer-events: none;
+            z-index: 99;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 10px;
+            font-weight: bold;
+            color: #e10080;
+            opacity: 0;
+            animation: trail-fade 0.8s forwards;
+        }
+        @keyframes trail-fade {
+            0% { opacity: 0.8; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #ffffff;
+            border-left: 4px solid #1b1b1b;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #426900;
+            border: 2px solid #1b1b1b;
+        }
+        body {
+            cursor: none;
+        }
+        .text-outline {
+            -webkit-text-stroke: 2px #1b1b1b;
+            color: transparent;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 40;
+            opacity: 0.12;
+            background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuANin42fOSxYoTAagr4PE6Jevi5PzHwO1Zw6RdAcWJy_fq1wiWlQnsNrYH9mGVsYKFXYJ0oW_gBj6muxPPwO7cc9hrUb6O2LWiei6PjhASQk8ww8kkR0qGNDHzlZH89lX8mCW3kRuEll9kGzSnAJB_GNZG7hGlPBPilQnFp1uIPgGGo7nJQDYl9gRXfypIX7nZV4KnXZ2bTf1q-lMTw29qtDJgG6goF6BUyLoUPUUq6BAT1U2DZHd6Q8bsbxNTRk7S4R2yGhLG9l1c);
+            animation: grain-dance 8s steps(10) infinite;
+        }
+        @keyframes grain-dance {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-5%, -5%); }
+            20% { transform: translate(-10%, 5%); }
+            30% { transform: translate(5%, -10%); }
+            40% { transform: translate(-5%, 15%); }
+            50% { transform: translate(-10%, 5%); }
+            60% { transform: translate(15%, 0); }
+            70% { transform: translate(0, 10%); }
+            80% { transform: translate(-15%, 0); }
+            90% { transform: translate(10%, 5%); }
+        }
+        .clashing-gradient-1 {
+            background: linear-gradient(45deg, #adff2f, #e10080);
+        }
+        .clashing-gradient-2 {
+            background: linear-gradient(135deg, #f0f000, #426900);
+        }
+        .sticker {
+            position: fixed;
+            pointer-events: none;
+            z-index: 5;
+            filter: drop-shadow(4px 4px 0 #000);
+            transition: transform 0.5s linear;
+        }
+        .terminal-border {
+            border: 4px solid #1b1b1b;
+            position: relative;
+        }
+    </style>
+<style>
+        body {
+          min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div id="custom-cursor"></div>
+<!-- Fixed Background Animation Layer -->
+<div class="fixed inset-0 w-full h-full z-[-1] opacity-70">
+<canvas id="shader-canvas-ANIMATION_10" style="display:block;width:100%;height:100%"></canvas>
+<script>
+        (function() {
+          const canvas = document.getElementById('shader-canvas-ANIMATION_10');
+          function syncSize() {
+            const w = canvas.clientWidth  || 1280;
+            const h = canvas.clientHeight || 720;
+            if (canvas.width !== w || canvas.height !== h) {
+              canvas.width  = w;
+              canvas.height = h;
+            }
+          }
+          if (typeof ResizeObserver !== 'undefined') {
+            new ResizeObserver(syncSize).observe(canvas);
+          }
+          syncSize();
+          const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+          if (!gl) return;
+          const vs = `attribute vec2 a_position;
+        varying vec2 v_texCoord;
+        void main() {
+          v_texCoord = a_position * 0.5 + 0.5;
+          gl_Position = vec4(a_position, 0.0, 1.0);
+        }`;
+          const fs = `precision highp float;
+        uniform float u_time;
+        uniform vec2 u_resolution;
+        varying vec2 v_texCoord;
+        float hash(vec2 p) {
+            return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+        }
+        void main() {
+            vec2 uv = v_texCoord;
+            vec3 baseCol = vec3(0.98, 0.98, 0.98);
+            float scanline = sin(uv.y * 1200.0 + u_time * 25.0) * 0.02;
+            float glitch = step(0.99, hash(vec2(floor(uv.y * 80.0), u_time * 0.8)));
+            float shift = glitch * (hash(vec2(u_time)) - 0.5) * 0.2;
+            float noise = hash(uv + u_time) * 0.03;
+            vec3 accentCol = vec3(0.678, 1.0, 0.184); 
+            float pulse = step(0.5, sin(u_time * 4.0 + uv.y * 40.0));
+            vec3 col = baseCol - scanline - noise; 
+            col = mix(col, accentCol, glitch * pulse * 0.3);
+            gl_FragColor = vec4(col, 1.0);
+        }`;
+          function cs(type, src) {
+            const s = gl.createShader(type);
+            gl.shaderSource(s, src);
+            gl.compileShader(s);
+            return s;
+          }
+          const prog = gl.createProgram();
+          gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+          gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+          gl.linkProgram(prog);
+          gl.useProgram(prog);
+          const buf = gl.createBuffer();
+          gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+          gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+          const pos = gl.getAttribLocation(prog, 'a_position');
+          gl.enableVertexAttribArray(pos);
+          gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+          const uTime = gl.getUniformLocation(prog, 'u_time');
+          const uRes = gl.getUniformLocation(prog, 'u_resolution');
+          function render(t) {
+            if (typeof ResizeObserver === 'undefined') syncSize();
+            gl.viewport(0, 0, canvas.width, canvas.height);
+            if (uTime) gl.uniform1f(uTime, t * 0.001);
+            if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+            gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+            requestAnimationFrame(render);
+          }
+          render(0);
+        })();
+        </script>
+</div>
+<!-- Grain Overlay -->
+<div class="grain-overlay"></div>
+<!-- Floating Stickers -->
+<div class="sticker" id="sticker-1" style="top: 15%; left: 10%;">
+<span class="material-symbols-outlined text-secondary text-5xl bg-background p-2 border-2 border-on-background">terminal</span>
+</div>
+<div class="sticker" id="sticker-2" style="top: 70%; right: 12%;">
+<span class="material-symbols-outlined text-primary text-5xl bg-background p-2 border-2 border-on-background">code</span>
+</div>
+<div class="sticker" id="sticker-3" style="top: 45%; left: 5%;">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-4xl bg-background p-2 border-2 border-on-background">sparkles</span>
+</div>
+<div class="sticker" id="sticker-4" style="top: 30%; right: 5%;">
+<span class="material-symbols-outlined text-on-background text-3xl bg-background p-2 border-2 border-on-background">ads_click</span>
+</div>
+<div class="sticker" id="sticker-5" style="top: 20%; left: 40%;">
+<span class="material-symbols-outlined text-secondary text-4xl bg-background p-2 border-2 border-on-background">bolt</span>
+</div>
+<div class="sticker" id="sticker-6" style="top: 80%; left: 20%;">
+<span class="material-symbols-outlined text-primary text-4xl bg-background p-2 border-2 border-on-background">data_object</span>
+</div>
+<div class="sticker" id="sticker-7" style="top: 60%; right: 40%;">
+<span class="material-symbols-outlined text-tertiary text-4xl bg-background p-2 border-2 border-on-background">javascript</span>
+</div>
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 border-b-border-weight-thick border-on-background bg-background flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<h1 class="font-display-lg-mobile text-display-lg-mobile font-bold text-on-background uppercase tracking-tighter">P. BHANU TEJA // ROOT</h1>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="font-body-md text-body-md uppercase font-bold text-primary active:translate-x-1 active:translate-y-1 transition-transform" href="index.html">ROOT</a>
+<a class="font-body-md text-body-md uppercase font-bold text-on-surface-variant hover:text-on-secondary-container hover:bg-secondary-container px-2 transition-all" href="projects.html">CODE</a>
+<a class="font-body-md text-body-md uppercase font-bold text-on-surface-variant hover:text-on-secondary-container hover:bg-secondary-container px-2 transition-all" href="about.html">STORY</a>
+<a class="font-body-md text-body-md uppercase font-bold text-on-surface-variant hover:text-on-secondary-container hover:bg-secondary-container px-2 transition-all" href="contact.html">CONTACT</a>
+</nav>
+</header>
+<main class="pt-24 pb-32 relative">
+<!-- Hero Section -->
+<section class="reveal-item relative min-h-[618px] flex flex-col justify-center items-center px-margin-mobile overflow-hidden border-b-4 border-on-background">
+<div class="relative z-10 text-center">
+<div class="inline-block bg-tertiary-container text-on-tertiary-container border-border-weight-thick border-on-background px-4 py-1 mb-6 font-label-bold text-label-bold -rotate-2 neo-shadow-sm">
+                    EST. 199X // SYSTEM ONLINE
+                </div>
+<h2 class="font-display-2xl text-display-2xl md:text-[220px] text-on-background uppercase leading-none select-none drop-shadow-[8px_8px_0_rgba(0,0,0,0.1)]">
+                    TEJA
+                </h2>
+<div class="clashing-gradient-1 p-1 mt-8 neo-shadow-md">
+<div class="bg-background p-6 border-border-weight-thick border-on-background text-on-background">
+<p class="font-display-lg text-[48px] md:text-[72px] leading-[0.9] uppercase mb-4 text-secondary italic font-black">FOUNDER OF GROWXAI</p>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto">
+                        Crafting digital ecosystems through <span class="text-secondary font-bold">Full-Stack Engineering</span> and <span class="text-primary font-bold">Neural Architecture</span>. Breaking the web one pixel at a time.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Statement Inserted from INFO Page -->
+<section class="reveal-item px-margin-mobile md:px-margin-desktop py-16 relative z-10">
+<div class="bg-white border-8 border-on-background p-8 md:p-12 neo-shadow-md relative terminal-border card-clunk max-w-6xl mx-auto">
+<div class="absolute -top-6 left-8 bg-primary-container border-4 border-on-background px-6 py-2 font-label-bold text-lg uppercase neo-shadow-sm">Mission Statement</div>
+<div class="absolute -bottom-4 -right-4 bg-tertiary-container border-2 border-on-background px-3 py-1 font-code-sm text-code-sm rotate-[-5deg]">CONFIDENTIAL.SH</div>
+<p class="font-display-lg text-display-lg-mobile md:text-display-lg text-left leading-[0.9] text-on-background">
+            BUILDING TOOLS THAT EMPOWER CREATORS THROUGH 
+            <span class="inline-block bg-primary-container px-4 py-1 border-4 border-on-background neo-shadow-sm mx-2">RAW CODE</span> 
+            AND 
+            <span class="inline-block bg-secondary-container text-on-secondary px-4 py-1 border-4 border-on-background neo-shadow-sm mx-2">UNFILTERED DESIGN.</span>
+</p>
+</div>
+</section>
+<!-- About Me & Portrait Section -->
+<section class="reveal-item px-margin-mobile md:px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<div class="md:col-span-8 bg-white border-4 border-on-background p-8 md:p-10 neo-shadow-sm terminal-border card-clunk">
+<div class="flex items-center gap-3 mb-6">
+<span class="w-3 h-3 bg-red-500 rounded-full border border-on-background"></span>
+<span class="w-3 h-3 bg-yellow-500 rounded-full border border-on-background"></span>
+<span class="w-3 h-3 bg-green-500 rounded-full border border-on-background"></span>
+<h3 class="font-headline-md text-headline-md uppercase border-b-2 border-on-background ml-4">About_Me.txt</h3>
+</div>
+<div class="font-body-lg text-body-lg space-y-6 text-on-surface-variant font-bold">
+<p>I am Pothuru Bhanu Teja, a multidisciplinary developer and digital craftsman obsessed with the intersection of performance and provocation. My work is a rejection of the "clean" web, favoring high-energy layouts and technical transparency.</p>
+<p>With a background rooted in systems architecture and a passion for frontend experimentalism, I specialize in building reactive interfaces that feel alive. I treat code as a physical medium—heavy, tactile, and intentional.</p>
+<p>Currently, I am focused on open-source tooling and neo-brutalist design systems that allow developers to reclaim their creative agency in an increasingly templated internet.</p>
+</div>
+</div>
+<div class="md:col-span-4 border-8 border-on-background bg-white p-6 neo-shadow-sm card-clunk relative">
+<div class="absolute -top-3 -left-3 bg-primary border-2 border-on-background text-on-primary px-2 font-code-sm text-xs z-10">USER_ID_001</div>
+<div class="aspect-square bg-surface-variant border-4 border-on-background overflow-hidden mb-4 relative">
+<img alt="P. Bhanu Teja Portrait" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOmegkuuAc4UpKp2tAy65FK0lPpFchlOx1PpvWbxWI1hT_jmSeeZZaMlOze9hoCK2hM6g7GlgKegeB9-h4ZqNaTiFhQW3wqha60Z9xFmK8hoEsR5V1h4RJ1quoWPkqMuGxTF3Peu4AqE4aj9CtvYupjPo3gR_YVoQR5X-i1EfQz0tBvkBvnOrz-CrWdR3gVKhgw4sGi-zWlxpXDyyyazeYvfK8ArXDCZUVnEuHoL8uKCB8TJaVgC3Saxjf9yenFANgyLKbokBzZDE"/>
+</div>
+<p class="font-label-bold text-label-bold uppercase text-center bg-on-background text-white py-2">P. BHANU TEJA // FOUNDER</p>
+</div>
+</section>
+<!-- Marquee Section -->
+<div class="reveal-item w-full bg-secondary py-4 border-y-border-weight-thick border-on-background overflow-hidden relative z-10">
+<div class="animate-marquee flex items-center">
+<span class="text-on-secondary font-display-lg text-display-lg uppercase mx-8">FULL-STACK DEVELOPER // AI ENTREPRENEUR // FULL-STACK DEVELOPER // AI ENTREPRENEUR //</span>
+<span class="text-on-secondary font-display-lg text-display-lg uppercase mx-8">FULL-STACK DEVELOPER // AI ENTREPRENEUR // FULL-STACK DEVELOPER // AI ENTREPRENEUR //</span>
+</div>
+</div>
+<!-- Bento Grid Projects/Sections -->
+<section class="px-margin-mobile md:px-margin-desktop py-16 relative z-10">
+<div class="mb-12">
+<h3 class="font-display-lg text-display-lg uppercase text-on-background text-outline mb-8">Featured_Projects_v2.0</h3>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Most Recent: Sudha Vanagar -->
+<div class="reveal-item md:col-span-12 group relative bg-primary-container border-8 border-on-background p-8 min-h-[400px] flex flex-col justify-end neo-shadow-md card-clunk cursor-pointer">
+<div class="absolute top-0 right-0 p-8 flex items-start gap-4">
+<span class="bg-secondary text-on-secondary px-6 py-2 font-label-bold text-xl border-4 border-on-background neo-shadow-sm rotate-3">MOST RECENT</span>
+<span class="material-symbols-outlined text-7xl text-on-primary-container/30">inventory_2</span>
+</div>
+<span class="absolute top-[-20px] left-8 bg-on-background text-white px-6 py-2 font-label-bold text-lg border-4 border-white neo-shadow-sm">CASE_01</span>
+<h3 class="font-display-2xl text-[80px] md:text-[120px] text-on-background mb-4 text-outline uppercase leading-none">SUDHA VANAGAR</h3>
+<p class="font-body-lg text-xl text-on-background font-bold max-w-2xl mb-8">A massive digital transformation for agricultural logistics. Streamlining supply chain transparency through decentralized architecture and reactive dashboards.</p>
+<div class="flex gap-6">
+<a href="https://github.com/BhanuTejapothuru01/Sudhanva-Nagar.git" target="_blank" rel="noopener noreferrer" class="bg-background text-on-background border-4 border-on-background px-8 py-4 font-label-bold text-lg neo-shadow-sm active:translate-x-1 active:translate-y-1 active:shadow-none transition-all uppercase">Source_Control</a>
+<a href="https://sudhavanagar.vercel.app/portal/login" target="_blank" rel="noopener noreferrer" class="bg-on-background text-background px-8 py-4 font-label-bold text-lg uppercase neo-shadow-sm">Launch_System</a>
+</div>
+</div>
+<!-- Grid Items -->
+<!-- Project: Duck Hunt -->
+<a href="https://duck-hunt-sandy.vercel.app/" target="_blank" rel="noopener noreferrer" class="reveal-item md:col-span-6 bg-tertiary-container border-8 border-on-background p-8 neo-shadow-md flex flex-col justify-between card-clunk cursor-pointer relative overflow-hidden block">
+<div class="absolute top-4 right-4 opacity-20">
+<span class="material-symbols-outlined text-9xl">target</span>
+</div>
+<div>
+<h4 class="font-display-lg text-[48px] mb-4 text-outline uppercase leading-none">DUCK HUNT AI</h4>
+<p class="font-body-md text-lg font-bold text-on-background mb-6">Reimagining a classic through computer vision and real-time neural feedback. It's not just a game; it's training data.</p>
+</div>
+<div class="border-t-4 border-on-background pt-4 flex justify-between items-center">
+<span class="font-code-sm font-bold uppercase">Tech: Python / OpenCV / WebGL</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</a>
+<!-- Project: Yoga Tracker -->
+<div class="reveal-item md:col-span-6 bg-secondary-fixed border-8 border-on-background p-8 neo-shadow-md flex flex-col justify-between card-clunk cursor-pointer relative overflow-hidden">
+<div class="absolute -bottom-10 -right-10 opacity-10 rotate-12">
+<span class="material-symbols-outlined text-[200px]">self_improvement</span>
+</div>
+<div>
+<h4 class="font-display-lg text-[48px] mb-4 text-outline uppercase leading-none">YOGA TRACKER</h4>
+<p class="font-body-md text-lg font-bold text-on-background mb-6">Biometric posture analysis using MediaPipe. Real-time alignment correction delivered via ultra-low latency browser streams.</p>
+</div>
+<div class="border-t-4 border-on-background pt-4 flex justify-between items-center">
+<span class="font-code-sm font-bold uppercase">Tech: TensorFlow.js / Next.js</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</div>
+<!-- Project: WebXAI -->
+<a href="https://www.webxai.in/" target="_blank" rel="noopener noreferrer" class="reveal-item md:col-span-4 bg-background border-8 border-on-background p-8 neo-shadow-md flex flex-col justify-between card-clunk cursor-pointer relative overflow-hidden group block">
+<div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-10 transition-opacity"></div>
+<div>
+<h4 class="font-display-lg text-[40px] mb-4 text-outline uppercase leading-none">WebXAI</h4>
+<p class="font-body-md font-bold text-on-background">Autonomous web scraping and reasoning engine. Transforming unstructured web data into structured knowledge graphs.</p>
+</div>
+<div class="mt-8">
+<div class="inline-block bg-on-background text-white px-3 py-1 font-code-sm text-xs mb-2">v0.8.4-ALPHA</div>
+<div class="w-full h-2 bg-on-background/10 border border-on-background">
+<div class="h-full bg-primary w-[84%]"></div>
+</div>
+</div>
+</a>
+<!-- Project: RamEditz -->
+<a href="https://rameditz-ydl5.vercel.app/" target="_blank" rel="noopener noreferrer" class="reveal-item md:col-span-8 bg-surface-variant border-8 border-on-background p-8 neo-shadow-md flex flex-col md:flex-row gap-8 items-center card-clunk cursor-pointer relative overflow-hidden block">
+<div class="w-full md:w-1/3 aspect-video bg-on-background border-4 border-on-background clashing-gradient-1 p-1">
+<div class="w-full h-full bg-background flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl">movie_edit</span>
+</div>
+</div>
+<div class="w-full md:w-2/3">
+<h4 class="font-display-lg text-[40px] mb-4 text-outline uppercase leading-none">RAMEDITZ</h4>
+<p class="font-body-md font-bold text-on-background">A professional content production workflow engine. Bridging the gap between raw creative output and high-engagement distribution.</p>
+<div class="flex gap-2 mt-4">
+<span class="px-2 py-1 bg-white border-2 border-on-background font-code-sm text-xs">FFMPEG</span>
+<span class="px-2 py-1 bg-white border-2 border-on-background font-code-sm text-xs">NODE.JS</span>
+<span class="px-2 py-1 bg-white border-2 border-on-background font-code-sm text-xs">AWS S3</span>
+</div>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- STAY RAW Section Integrated -->
+<section class="reveal-item w-full border-y-8 border-on-background bg-on-background py-8 overflow-hidden relative z-10 rotate-[-1deg] neo-shadow-md">
+<div class="animate-marquee flex items-center whitespace-nowrap">
+<span class="font-display-lg text-primary text-[80px] uppercase px-12 tracking-tighter">STAY RAW // STAY RAW // STAY RAW // STAY RAW // STAY RAW // STAY RAW // </span>
+<span class="font-display-lg text-primary text-[80px] uppercase px-12 tracking-tighter">STAY RAW // STAY RAW // STAY RAW // STAY RAW // STAY RAW // STAY RAW // </span>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Updated) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-background border-t-border-weight-thick border-on-background flex justify-around items-center px-4 pb-6 pt-2 h-28">
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary border-border-weight-thin border-on-background px-6 py-3 translate-x-[-4px] translate-y-[-4px] active-nav-shadow transition-all duration-100 glitch-nav" href="index.html">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-bold text-label-bold">ROOT</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-background px-6 py-3 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all group" href="projects.html">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">code</span>
+<span class="font-label-bold text-label-bold">CODE</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-background px-6 py-3 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all group" href="about.html">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">menu_book</span>
+<span class="font-label-bold text-label-bold">STORY</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-background px-6 py-3 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all group" href="contact.html">
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">mail</span>
+<span class="font-label-bold text-label-bold">CONTACT</span>
+</a>
+</nav>
+<script>
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.toISOString().split('T')[1].split('.')[0] + ' UTC';
+            const element = document.getElementById('current-time');
+            if(element) element.textContent = timeStr;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        const heroText = document.querySelector('h2');
+        const stickers = document.querySelectorAll('.sticker');
+        const cursor = document.getElementById('custom-cursor');
+        
+        const snippets = ['0101', '{...}', '=>', 'NULL', 'ROOT', 'PUSH', 'POP', 'FETCH', 'GROWXAI'];
+        let lastTrailTime = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            
+            cursor.style.left = `${x - 15}px`;
+            cursor.style.top = `${y - 15}px`;
+
+            const tiltX = (x / window.innerWidth - 0.5) * 30;
+            const tiltY = (y / window.innerHeight - 0.5) * 30;
+            if(heroText) {
+                heroText.style.transform = `translate(${tiltX}px, ${tiltY}px)`;
+            }
+
+            const now = Date.now();
+            if (now - lastTrailTime > 100) {
+                const trail = document.createElement('div');
+                trail.className = 'cursor-trail';
+                trail.style.left = `${x}px`;
+                trail.style.top = `${y}px`;
+                trail.textContent = snippets[Math.floor(Math.random() * snippets.length)];
+                document.body.appendChild(trail);
+                setTimeout(() => trail.remove(), 800);
+                lastTrailTime = now;
+            }
+        });
+
+        const revealItems = document.querySelectorAll('.reveal-item');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active', 'glitch-flash');
+                    setTimeout(() => entry.target.classList.remove('glitch-flash'), 400);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealItems.forEach(item => observer.observe(item));
+
+        let lastTime = 0;
+        function animateStickers(time) {
+            const delta = time - lastTime;
+            lastTime = time;
+            stickers.forEach((sticker, i) => {
+                const floatY = Math.sin(time * 0.001 + i) * 15;
+                const floatX = Math.cos(time * 0.0008 + i) * 8;
+                const scrollY = window.scrollY;
+                const speed = (i + 1) * 0.12;
+                const rotation = scrollY * 0.1 * (i % 2 === 0 ? 1 : -1) + (time * 0.02);
+                sticker.style.transform = `translate(${floatX}px, ${scrollY * speed + floatY}px) rotate(${rotation}deg)`;
+            });
+            requestAnimationFrame(animateStickers);
+        }
+        requestAnimationFrame(animateStickers);
+    </script>
+</body></html>
